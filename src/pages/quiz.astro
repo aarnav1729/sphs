@@ -1,0 +1,14 @@
+---
+import MainLayout from '../layouts/main-layout.astro';
+import QuizComponent from '../components/QuizComponent.tsx';
+
+// Define the title for the Quiz page
+const title = 'Quiz - SPHS-1963';
+---
+
+<MainLayout title={title}>
+    <section class="w-full max-w-[1200px] mx-auto px-12 xl:px-0 pt-[100px] lg:pt-[200px]">
+        <h2 class="text-3xl font-dm text-center pb-6">Test Your Knowledge</h2>
+        <QuizComponent />
+    </section>
+</MainLayout>

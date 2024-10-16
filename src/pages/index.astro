@@ -1,0 +1,187 @@
+---
+import MainLayout from '../layouts/main-layout.astro'
+import Button from '../components/button.tsx'
+import ArrowSec from '../icons/arrow-sec.tsx'
+import CallIcon from "../icons/call.tsx"
+import Experience from '../components/experience.tsx'
+
+
+const services = [
+	{
+		title: 'Reunion: 27 Sep, 2024',
+		text: 'Hosted by Surender Pal Singh Saluja.'
+	},
+	{
+		title: '60th Anniversary Supper: Aug 29, 2022',
+		text: 'Hosted by Surender Pal Singh Saluja.'
+	},
+	{
+		title: 'A tribute to George Nova',
+		text: 'Conducted the first successful coronary artery bypass graft surgery in 1997'
+	},
+]
+
+const reviews = [
+	{
+		img: '/natasha.png',
+		name: 'Jay Donkar',
+		location: 'Reunion: 10th Jan, 2015',
+		review: 'To begin with, it was  a wonderful reunion with over 24 or 25 mates participating with a lot of hulla gulla. After most of them had arrived we started off with the prayers we always said at the school assembly. This was followed by a one minute silence in memory of all our departed class mates. The get together really warmed up - courtesy of the scotch provided by George . Many of the guys enquired about you and we hope you will be here for another together being planned at the same venue on the 13th instant as Winston could not make it due to his delayed arrival. I understand he has a PPP and it will be great to be with all of you again. So do try and make it Venkat and absolve yourself from the last absence!! The highlight of the evening was the presence of master Rex Thomas with his graceful wife. They spent over an hour with us and were quite pleased to be with us. Your anecdote was read by V.B. and was the only one to give a whack on my posterior!! That is it for now and let us know your program. Take care.'
+	},
+	{
+		img: '/benny.png',
+		name: 'Jay Donkar',
+		location: 'Reunion: 13th Jan, 2015',
+		review: 'The second meet last evening was another wonderful moment, this time, with the spouses of some of the mates .George,  Noushir, Selvaraj, Rajgopal, Clement, V.B.Shankar, Chandan Singh, Winston were the ones who came with their better halves. Kuldeep, Muneer, Manuel, Lateef Khader, and I were solo. The evening started with our assembly prayer. Thereafter the ladies were asked to speak about their husbands and it was nice to hear about our boys from the Home Ministry!! Georges  scotch was there to keep us all in good spirits. The presence of the ladies made the event colourful, added to that all the anecdotes, and leg pulling - in short a nostalgic evening.'
+	},
+	{
+		img: '/raymond.png',
+		name: 'George Nova',
+		location: 'Introductory Blog',
+		review: 'This is a compilation of and for the students who completed their 11th class in 1963 from SPHS and moved on to other institutions. Most of us have not met each other since then. We went our separate ways in 1963 as students – and now 51 years later, as fathers, grandfathers, we propose to connect (and stay connected) with each other as individuals, as small or large groups in different cities in India or abroad. This compilation attempt is being made to serve as a directory of ‘who is where’ from the batch of 1963 and how they can be contacted (if they wish to be). Our attempt is also to assimilate very briefly, the 50 years of our life after school – we can do this embellished with pictures of family, children and grandchildren and yes, most certainly, pictures of you with classmates in the recent or distant past …all pictures that you wish to share will enable us to take a walk together down a long memory lane. This compilation is to be used to have access to classmates especially in cities to which our travels take us. We however will need to respect and be mindful of our age, our family members, time zones and the wish for privacy of our classmates. The phone numbers and email ID will be circulated only if the batch member has entered it in the enclosed sheet (which will be deemed as permission to circulate) but only to the batch of 1963. Whilst this is most certainly the intent, the software prowess of cyber users is a reality, and needs to be factored in our expectation from such a compilation.'
+	},
+]
+
+const projects = [
+	{
+		img: '/1.webp',
+		name: 'Saint Patricks High School',
+		text: 'Class of 1963'
+	},
+	{
+		img: '/sp.webp',
+		name: 'Surender Pal Singh Saluja',
+		text: 'Founder and Chairman at Premier Energies and SPHS Alumni'
+	},
+	{
+		img: '/viv.jpeg',
+		name: 'Reunion with Vivian Lima',
+		text: '19th Jan, 2019'
+	},
+	{
+		img: '/sp.jpeg',
+		name: '60th Anniversary Party',
+		text: 'Hosted by Surender Pal Singh Saluja'
+	},
+]
+
+---
+
+<MainLayout title = 'Interior Design Home'>
+
+	<!-- Banner -->
+	
+	<section class="w-full bg-hero bg-no-repeat bg-cover h-screen lg:min-h-[110vh] px-12 xl:px-0 flex items-center ">
+		<div class="lg:max-w-[1200px] w-full mx-auto flex flex-col">
+			<h1 class="text-[40px] leading-[50px] md:text-[60px] xl:text-[85px] pb-4 font-dm md:leading-[106.25px] w-full xl:max-w-[50%] text-primary-200"> Welcome to SPHS-1963 </h1>
+			<p class="text-base md:text-[22px] pb-5 font-jost text-text-gray-200 w-full lg:max-w-[50%]">This website has been created for the batch of 1963, from Saint Patricks High School to stay in touch and 
+				reminisce about the good ol' days!</p>
+			<Button text="Join WhatsApp Group"/>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+
+	<section class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] justify-between ">
+		{
+			services.map((service) => {
+				return (
+					<div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
+						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
+						<a href="https://photos.google.com/share/AF1QipO_818KFtWOGYa76vpRN6FFGislORo7yIOjezXTmCxFrQG2SsulzorGF3RgGqE9-g?key=T3pJSXE1Zm5GbDBCemZWQTFmTHZVTzlmdVNSZld3" class="text-text-gray-200 leading-snug text-lg tracking-tight font-jost font-semibold gap-2 py-4 md:py-8 startCenter">Photos <ArrowSec /></a>
+					</div>
+				)
+			})
+		}
+	</section>
+
+	<!-- About Section -->
+
+	<section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 flex flex-col-reverse justify-center items-center lg:grid grid-cols-2 gap-[75px] pt-[100px] lg:pt-[200px]">
+		<div class="flex flex-col gap-8 max-w-[472px] items-center lg:items-start py-6">
+			<h2 class="text-[30px] text-center capitalize lg:text-left font-dm tracking-wide leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">To Our Dear Departed</h2>
+			<p class="text-base md:text-[22px] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">We miss you, click here for some pictures of the good ol' days!</p>
+			<div class="flex gap-4 pt-3 items-center">
+				<CallIcon/>
+				<p class="flex flex-col text-text-gray-200 font-jost tracking-tight">
+					<span class="text-2xl font-bold leading-9 ">updated 2024</span>
+					<span class="text-[22px] leading-8">reach out for any inquiries!</span>
+				</p>
+			</div>
+			<Button text="View Pictures"/>
+		</div>
+
+		<div>
+			<img src="/mil.png" alt="" />
+		</div>
+	</section>
+
+	<!-- What People Think About Us Section -->
+
+	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
+	<div class="w-full flex flex-col bg-primary-300 rounded-[48px] px-6 py-[88px]">
+		<h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-9 mx-auto">Blogs!</h2>
+		<div class="flex flex-col gap-8 lg:gap-10 lg:flex-row justify-between">
+			{
+			reviews.map((rev) => {
+				return (
+					<div class="w-full bg-white max-w-[370px] px-[37px] py-[53px] rounded-3xl mx-auto flex flex-col justify-center gap-4 md:gap-6">
+						<div class="flex flex-col sm:flex-row gap-6 items-center">
+							<img src={rev.img} alt="" />
+							<p class="flex flex-col tracking-tight leading-9">
+								<span class="text-primary-200 text-lg lg:text-[25px] font-dm">{rev.name}</span>
+								<span class="text-text-gray-200 text-base lg:text-lg font-jost">{rev.location}</span>
+							</p>
+						</div>
+						<p class="font-jost tracking-tight leading-8 text-base text-center sm:text-left text-text-gray lg:text-[22px]">{rev.review}</p>
+					</div>
+			)
+		})
+		}
+		</div>
+	</div>
+	</section>
+
+
+	<!-- Projects Section -->
+
+	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
+		<h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-2 mx-auto">Picture Gallery</h2>
+		<p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[60%] mx-auto">Scroll through the picture gallery of Saint Patricks High School Class of 1963 and delve into the feeling of everlasting nostalgia!</p>
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-[104px] lg:gap-y-[56px] mt-12 lg:mt-[93px]">
+			{
+			projects.map((proj) => {
+				return (
+					<div class="w-full flex flex-col gap-4">
+					<img src={proj.img} alt="" />
+							<p class="flex flex-col tracking-tight leading-9">
+								<span class="text-primary-200 text-lg lg:text-[25px] font-dm">{proj.name}</span>
+								<span class="text-text-gray-200 text-base lg:text-lg font-jost">{proj.text}</span>
+							</p>
+					</div>
+			)
+		})
+		}
+		</div>
+	</section>
+
+	<!-- Experience Section -->
+	</section>
+</MainLayout>
+ 
+
+<style>
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+</style>
